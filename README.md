@@ -1,2 +1,2 @@
 # ardios
-Exporting rdio data.
+Adios rdio, it's been real: Migrate rdio data to spotify.
