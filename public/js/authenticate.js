@@ -1,13 +1,14 @@
-console.log("Hi!")
+var REDIRECT_URI = "http://localhost:3000/rdio-code";
 
-// $("#authenticate-rdio").click(function(){
-// 	R.authenticate({
-// 		complete: function(authenticated){
-// 			if(authenticated) {
-// 				console.log("User authenticated");
-// 				authenticationComplete();
-// 			}
-// 		},
-// 		mode: 'redirect'
-// 	})
-// });
+$("#authenticate-rdio").click(function() {
+	window.location = "https://www.rdio.com/oauth2/authorize"
+		+ "?"
+		+ $.param(
+			{
+				response_type: "code",
+				client_id: "pz3i3g4smfdofidsegap6d5c3y",
+				redirect_uri: REDIRECT_URI,
+				mode: 'popup',
+				hideSignup: true
+			});
+});
